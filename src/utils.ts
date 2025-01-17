@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { ThreadPool } from "./threadpool.ts";
 
 export interface Asset {
   path: string;
@@ -32,4 +33,13 @@ export const readAssets = async (dir: string, assets: Array<Asset> = []) => {
   }
 
   return assets;
+}
+
+export const exists = async (path: string) => {
+  try {
+    await fs.access(path);
+    return true;
+  } catch {
+    return false;
+  }
 }
