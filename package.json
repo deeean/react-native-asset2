@@ -1,0 +1,21 @@
+{
+  "name": "react-native-asset2",
+  "module": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "react-native-asset2": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cli-progress": "^3.11.6",
+    "@types/plist": "^3.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "plist": "^3.1.0",
+    "xcode": "^3.0.1"
+  }
+}
